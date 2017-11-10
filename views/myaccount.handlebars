@@ -1,0 +1,44 @@
+
+<div id = "myacdet">
+    {{#each ulist}}
+        <h4 id = "name">{{this.fname}} {{this.lname}}</h4>
+        <h4>{{this.email}}</h4>
+        <input id = "htdispid" type = "hidden" value = {{this.id}}>
+    {{/each}}
+</div>
+
+<h5>Wish List</h5>
+<table id = "mywishlist" class = "stripped responsive-table">
+        <tr>
+            <th>Product Name</th>
+            <th>Product Description</th>
+            <th>Product Price</th>
+        </tr>
+      {{#each wlist}}
+                <tr>
+                        <form>
+                              <td><input id="prdname-{{this.id}}" name="prdname-{{this.id}}" type="text" value="{{this.product_name}}" placeholder="{{this.product_name}}" class="materialize-textarea" /></td>
+                              <td><input id = "prddesc-{{this.id}}"  name = "prddesc-{{this.id}}" type ="text" value = "{{this.product_desc}}" placeholder="{{this.product_desc}}" class="materialize-textarea" /></td>
+                              <td><input id = "prdprice-{{this.id}}"  name = "prdprice-{{this.id}}" type ="text" value = "{{this.product_price}}" placeholder="{{this.product_price}}" class="materialize-textarea"/></td>
+                              <td><button data-id ="{{this.id}}" class ="updbtn btn btn-info">Update</button></td>
+                              <td><button data-id ="{{this.id}}" class ="delbtn btn btn-danger">Delete</button></td>
+                        </form>
+                </tr>
+        {{/each}}
+</table>
+<div class = "container">
+              <h5>Add Products </h5>
+              <div class = "row">
+                    <form class = "create-form">
+                         <div class = "form-group">
+                                 <input id = "htprodname" type = "text" class="materialize-textarea" placeholder = "Product Name" name = "htsubname">
+                                 <input id = "htproddesc" type = "text" class="materialize-textarea" placeholder = "Product Description" name = "hthwdesc">
+                                 <input id = "htprodprice" type = "text" class="materialize-textarea" placeholder = "Enter Price" name = "hthwdesc">
+                                <button id ="prodaddbtn" class = "btn btn-success" type = "submit">Add to list</button>
+                         </div>
+                    </form>
+              </div>
+</div>
+<div class = "container">
+      <button><a href = "/">Sign Out</a></button>
+</div>
