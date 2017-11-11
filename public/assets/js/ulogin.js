@@ -17,26 +17,31 @@ $(function() {
                      $("#ht-message").text("");
                      var  email = $("#htsemail").val().trim();
                      var  pword =  $("#htspwd").val().trim();
+                     if( email != "" && pword != "")
+                     {
+                           console.log("inside ht login",email);
+                           $.ajax("/api/users/login/"+email+"/"+pword,
+                          {
+                            type : "GET",
 
-                     console.log("inside ht login",email);
-                     $.ajax("/api/users/login/"+email+"/"+pword,
-                    {
-                      type : "GET",
-
-                    }).then(function(response)
-                         {
-                                console.log(" inside promise");
-                               if (response.status === 404)
-                               {   console.log("Errror");
-                                }
-                                else {
-                                  console.log("Ok succesfull login");
-                                  console.log("Res",response);
-                                  window.location = '/users/myaccount/' + response.id;
-                                }
-
-                         } // end of function (promise)
-                    ); // end of promise
+                          }).then(function(response)
+                               {
+                                      console.log(" inside promise");
+                                     if (response.id === "none")
+                                     {   console.log("Errror");
+                                        $("#lgmsg").text("Invalid Password!! Retry!");
+                                      }
+                                      else {
+                                        console.log("Ok succesfull login");
+                                        console.log("Res",response);
+                                        window.location = '/users/myaccount/' + response.id;
+                                      }
+                               } // end of function (promise)
+                          ); // end of promise
+                      }
+                      else {
+                          $("#lgmsg").text("Please enter in all fields");
+                      }
           }); // end on click;
 
             $("#prodaddbtn").on("click",function(event)
