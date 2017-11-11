@@ -34,5 +34,12 @@ body {
 .page-footer {
    background-color: black ;
    color : white;
+}
 
+#frontimg {
+  padding-top: 40px;
+  margin-top: 10px;
+  padding-right: 20px;
+  opacity : 0.5;
+/*  height: 50vh; */
 }
