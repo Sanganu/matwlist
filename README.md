@@ -4,14 +4,13 @@ Wish list Organizer using Materialize CSS Frameworks
 # wlist
 
 Wish List Organizer Applicataion,
-
 Overall View:
-The Application is designed to maintain a person's wish list. Currently wish list management are specific to the Shopping site. This application provides a way to maintain a person's wishlist without any link to shopping sites. With the envision of developing it further to place api calls to different shopping sites for price comparison. Another important functionality to be implemented is to create groups (groups can be family, collegues, friends) etc. The wish list of the person to be visible / shared to everybody in the group. If the group is family, if the kid creates a wish list then every member of the group can see the wish list. The dad may select a specifi item to buy, the mom would select a specific item to buy and so forth. The kid will not know whether any item from his list has been selected, to maintain Suprise!!.
-
+The application lets a User Create an Account using an Email address. He Can Create Groups and for each group, he can add members to the group. Each member can add their own wish list. All the members of the group can see the other members Wish List.  The Person can lock an item from the wish list if he decides to buy it as a gift for the other person.   This application will be useful for Teachers to create a wish list for the classroom to be shared with the Parents, or any Orphanage or other Organizations can also use this to get donations from donors. Or A person could just create a group for his family, a group of his colleagues, a group of his friends. I also envision to use Amazon API, eBay API to provide details of the product and the price. The modules currently implemented are User account creation and adding/deleting / updating products to his wishlist.  Technologies used MySQL, Node.js,  ORM Concepts, Express, Express-handlebars, HTML, CSS, Materialize, JQuery, Javascript.
+Wish List Application - The application lets a User Create an Account using an Email address. He Can Create Groups and for each group, he can add members to the group. Each member can add their own wish list. All the members of the group can see the other members Wish List.  The Person can lock an item from the wish list if he decides to buy it as a gift for the other person.   This application will be useful for Teachers to create a wish list for the classroom to be shared with the Parents, or any Orphanage or other Organizations can also use this to get donations from donors. Or A person could just create a group for his family, a group of his colleagues, a group of his friends. I also envision to use Amazon API, eBay API to provide details of the product and the price. The modules currently implemented are User account creation and adding/deleting / updating products to his wishlist.  Technologies used MySQL, Node.js,  ORM Concepts, Express, Express-handlebars, HTML, CSS, Materialize, JQuery, Javascript.
 Features implemented:
 A person can create a login with an email id and add items to his wish list.
+The User can create an account. Add items to his wishlist. Add/Update/delete wishlist items
 
 Technical Details:
 Node.js,Express, Express-handlebars, MySQL, ORM model implementation. MVC Architect.
-
 Materialize CSS Framework
