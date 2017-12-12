@@ -24,4 +24,6 @@ The User can create an account. Add items to his wishlist. Add/Update/delete wis
 
 
 # wishlistmaterialize
-Wish list Organizer using Materialize CSS Frameworks. The Materialize Framework implementation needed to be kept as a seperate Respository, so that a new css framework can be implemented on the functionality files.
+Wish list Organizer using Materialize CSS Frameworks. The Materialize Framework implementation needed to be kept as a seperate Respository, so that a new css framework can be tried out on the functionality files.
+
+Heroku Deployed: https://morning-plains-11582.herokuapp.com/
