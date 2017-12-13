@@ -1,29 +1,21 @@
 # wlist
 
-Wish List Organizer Applicataion.
-
+Wish List Organizer Applicataion,
 
 Overall View:
+The Application is designed to create,maintain & share wish list.
+This Application can be used by Any Non-profit Organizations also. They can create a  wish list of the things needed and share with members, The Memebers can select any items which they propose to buy. Once the item is selected it will be removed from the wish list. Teachers, Families, Friend groups, Collegues can also use this appliction. The wish list of the person to be visible / shared to everybody in the group. If the group is family, if the kid creates a wish list then every member of the group can see the wish list.
 
-Currently Each online Shoppping sites has an option to create wish list specific to their products under a user account. This application gives the user to create a shopping list irrespective of any shopping sites.
-The application lets a User Create an Account using an Email address. He Can Create Groups and for each group, he can add members to the group. Each member can add their own wish list. All the members of the group can see the other members Wish List.  The Person can lock an item from the wish list if he decides to buy it as a gift for the other person.   This application will be useful for Teachers to create a wish list for the classroom to be shared with the Parents, or any Orphanage or other Organizations can also use this to get donations from supporters, Or A person could just create a group for his family, a group of his colleagues, a group of his friends. With an envision to use Amazon API, eBay API to provide details of the product and the price (for comparison). The modules currently implemented are User account creation and adding/deleting / updating products to his wishlist. 
-
-
-
-Technical Details:
-
-
-Technologies used MySQL, Node.js,  ORM Concepts, Express, Express-handlebars, HTML, CSS, Materialize CSS Frameworks, JQuery, Javascript,ORM model implementation. MVC Architect.
-
+ Currently wish list management are specific to the Shopping site. This application provides a way to maintain a person's wishlist without any link to shopping sites. With the envision of developing it further to place api calls to different shopping sites for price comparison.
 
 Features implemented:
-
 A person can create a login with an email id and add items to his wish list.
-The User can create an account. Add items to his wishlist. Add/Update/delete wishlist items
+
+Technical Details:
+Node.js,Express, Express-handlebars, MySQL, ORM model implementation. MVC Architect. Materilize CSS frmework is implemented. 
+
+wlist Repo - Development Environment
+Wish list Materialize - Production Environment
 
 
-
-# wishlistmaterialize
-Wish list Organizer using Materialize CSS Frameworks. The Materialize Framework implementation needed to be kept as a seperate Respository, so that a new css framework can be tried out on the functionality files.
-
-Heroku Deployed: https://morning-plains-11582.herokuapp.com/
+Deployed on Heroku: https://morning-plains-11582.herokuapp.com/
