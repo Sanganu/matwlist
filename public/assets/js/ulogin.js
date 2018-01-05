@@ -15,14 +15,18 @@ $(function() {
         {
                      event.preventDefault() ;
                      $("#ht-message").text("");
-                     var  email = $("#htsemail").val().trim();
-                     var  pword =  $("#htspwd").val().trim();
-                     if( email != "" && pword != "")
+                     var credentials = {
+                           email : $("#htsemail").val().trim(),
+                           pword :  $("#htspwd").val().trim()
+                     }
+                    
+                     if( credentials.email != "" && credentials.pword != "")
                      {
-                           console.log("inside ht login",email);
-                           $.ajax("/api/users/login/"+email+"/"+pword,
+                           
+                           $.ajax("/api/users/login/",
                           {
-                            type : "GET",
+                            type : "POST",
+                            data : credentials
 
                           }).then(function(response)
                                {

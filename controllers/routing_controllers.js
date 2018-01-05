@@ -32,11 +32,11 @@ router.get("/users/myaccount/:id", function(req, res) {
 });
 
 //Log in to the account
-router.get("/api/users/login/:email/:pword", function(req, res) {
+router.post("/api/users/login/", function(req, res) {
        console.log("In post route for login",req);
        var condition =
-       { email : req.params.email,
-         pword : req.params.pword
+       { email : req.body.email,
+         pword : req.body.pword
        } ;
         user.selectone(condition, function(result)
         {
@@ -208,44 +208,3 @@ router.delete("/api/users/delete/:id", function(req, res) {
   }); // end of post route to add new user accounts
   module.exports = router;
 
-/*
-router.get("/api/users/wishlist/:id",function(req,res) {
-  var condition = { id : req.params.id};
-   console.log('condition is :',condition);
-   user.selectone(condition,function(result) {
-        console.log('Results from select one',result);
-        if ( result.length === 0)
-        {
-          console.log("Wish list not yet created");
-          //  res.send("yes");
-           res.json({exist : 'no'});
-            return res.status(200).end();
-        }
-        else {
-          console.log("wishlist",result);
-          res.render('wihlist',{wlist:result});
-          return res.status(404).end();
-        }
-    });
-  });
-  */
-// Export routes for server.js to use.
-/* Wish List */
-/*
-router.get("/api/users/wishlist/",function(req,res) {
-   wish.all(function(result) {
-        console.log('Results from select one',result);
-        if ( result.length === 0)
-        {
-          console.log("Wish list not yet created");
-          //  res.send("yes");
-           res.json({exist : 'no'});
-            return res.status(200).end();
-        }
-        else {
-          console.log("wishlist",result);
-          res.render('wishlist',{wlist:result});
-          return res.status(404).end();
-        }
-    });
-  }); */
