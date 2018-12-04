@@ -34,6 +34,8 @@ body {
 .page-footer {
    background-color: black ;
    color : white;
+  position: fixed;
+  bottom:0;
 }
 
 #frontimg {
